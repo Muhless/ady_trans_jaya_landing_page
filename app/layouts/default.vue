@@ -2,7 +2,6 @@
 
 <template>
   <div>
-    <Topbar />
     <main>
       <slot />
     </main>

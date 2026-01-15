@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import Highlight from "~/components/Highlight.vue";
+import Service from "~/components/Service.vue";
+
 useHead({
   title: "PT. Ady Trans Jaya - Jasa Transportasi",
   meta: [
@@ -17,8 +20,7 @@ useHead({
     },
     {
       property: "og:description",
-      content:
-        "Jasa transportasi barang profesional dan terpercaya di Indonesia",
+      content: "Jasa transportasi barang profesional dan terpercaya di Indonesia",
     },
     {
       property: "og:type",
@@ -30,4 +32,6 @@ useHead({
 
 <template>
   <Hero />
+  <Highlight />
+  <Service />
 </template>
