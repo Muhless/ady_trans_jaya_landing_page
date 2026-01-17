@@ -11,4 +11,5 @@ export default defineNuxtConfig({
     exposeConfig: true,
     viewer: true,
   },
+  css: ["swiper/css", "swiper/css/pagination", "swiper/css/navigation"],
 });

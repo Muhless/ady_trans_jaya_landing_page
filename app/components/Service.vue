@@ -3,7 +3,7 @@ import ServiceCard from "./ServiceCard.vue";
 </script>
 
 <template>
-  <div class="px-60 py-10 bg-gray-100 w-full">
+  <div class="px-60 py-20 bg-gray-100 w-full">
     <div class="text-center">
       <h2 class="text-4xl">Layanan Kami</h2>
       <p class="leading-loose my-10">

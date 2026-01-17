@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Footer from "~/components/Footer.vue";
 import Highlight from "~/components/Highlight.vue";
 import Service from "~/components/Service.vue";
 
@@ -20,7 +21,8 @@ useHead({
     },
     {
       property: "og:description",
-      content: "Jasa transportasi barang profesional dan terpercaya di Indonesia",
+      content:
+        "Jasa transportasi barang profesional dan terpercaya di Indonesia",
     },
     {
       property: "og:type",
@@ -31,7 +33,19 @@ useHead({
 </script>
 
 <template>
-  <Hero />
-  <Highlight />
-  <Service />
+  <section>
+    <Hero />
+  </section>
+  <section id="abouts">
+    <Highlight />
+  </section>
+  <section id="services">
+    <Service />
+  </section>
+  <section id="vehicles">
+    <Vehicle />
+  </section>
+  <section id="contacts">
+    <Footer />
+  </section>
 </template>
