@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const emit = defineEmits(["click"]);
+
 defineProps<{
   label: string;
   id: string;
@@ -6,23 +8,25 @@ defineProps<{
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
-  if (element) {
-    const headerOffset = 64; // h-16 = 64px
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  if (!element) return;
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  }
+  const headerOffset = 64;
+  const elementPosition = element.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+
+  emit("click"); // 🔥 penting
 };
 </script>
 
 <template>
   <button
     @click="scrollToSection(id)"
-    class="cursor-pointer text-white/80 hover:text-white transition"
+    class="cursor-pointer text-white/80 hover:text-white transition text-base py-2"
   >
     {{ label }}
   </button>

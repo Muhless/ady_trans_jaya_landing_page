@@ -1,25 +1,29 @@
 <template>
-  <div class="w-full">
-    <div class="grid grid-cols-2 rounded-2xl bg-white h-72">
-      <div class="h-72">
-        <img
-          :src="src"
-          :alt="alt"
-          class="w-full h-full object-cover rounded-l-2xl"
-        />
-      </div>
-      <div class="flex flex-col px-20 justify-center">
-        <h2 class="text-2xl font-bold">{{ title }}</h2>
-        <p class="leading-loose">{{ description }}</p>
-      </div>
+  <div
+    class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition"
+  >
+    <!-- Image -->
+    <div class="w-full h-52 sm:h-60 md:h-64">
+      <img :src="src" :alt="alt" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 text-center sm:text-left">
+      <h3 class="text-xl font-bold mb-3">
+        {{ title }}
+      </h3>
+
+      <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 defineProps<{
   src: string;
-  alt?: string;
+  alt: string;
   title: string;
   description: string;
 }>();
