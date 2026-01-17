@@ -29,7 +29,7 @@ import { Icon } from "@iconify/vue";
 
       <!-- CTA -->
       <a
-        href="https://wa.me/6283813343637"
+        href="https://wa.me/628871165551"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Hubungi Ady Trans Jaya via WhatsApp"
